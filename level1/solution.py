@@ -8,3 +8,13 @@ def solution(s):
     #the string, else increment i where i is the counter.
     #now is this a general optimal approach? i will leave the answer for 
     #tomorrow
+    #re, 00:38 2/5 can't think of another way and didn't get a lot of time today to think
+    #about so here we go
+    i=1
+    while i<=len(s)//2:
+        if len(s)%i==0:
+            if s.count(s[:i])==len(s)//i:
+                return (len(s)//i)
+        i+=1
+    return(1)
+
